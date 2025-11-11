@@ -1,7 +1,11 @@
+
+
+
 pipeline {
     agent any
 
     stages {
+
         stage('Build') {
             steps {
                 echo 'Construyendo el proyecto...'
@@ -23,6 +27,6 @@ pipeline {
                 sh 'bandit -r . || true'
             }
         }
+
     }
-}
 }
